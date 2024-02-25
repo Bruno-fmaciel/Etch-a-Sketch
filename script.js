@@ -19,7 +19,12 @@ squares.forEach(function(square) {
     })
 })
 
-
+const reset = document.querySelector(".reset");
+reset.addEventListener('click', function(e){
+    squares.forEach(function(square) {
+        square.style.background = 'white';
+    })
+})
 
 
 
