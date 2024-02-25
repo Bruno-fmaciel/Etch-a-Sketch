@@ -26,3 +26,10 @@ button {
     background-color: rgba(190, 185, 185, 0.792);
 }
 
+.slider-container {
+    margin: 0 auto;
+}
+
+.slider:hover {
+    opacity: 1;
+}
