@@ -1,16 +1,16 @@
 const container = document.querySelector('.container');
-for (n=0;n<=15;n++) {
-    const row = document.createElement('div');
-    row.classList.add('row');
-    container.appendChild(row);
-    for (i = 0;i <= 15;i++) {
+function createGrid(row,collumn) {
+    gridArea = row * collumn
+    for (i = 0;i <= gridArea-1;i++) {
         const div = document.createElement("div");
-        div.style.height = "50px";
-        div.style.width = "50px";
+        div.style.width = `${(800/collumn)}px`;
+        div.style.height = `${(800/collumn)}px`;
         div.classList.add('square');
-        row.appendChild(div);
+        container.appendChild(div);
     }
 }
+
+createGrid(16,16);
 
 const squares = document.querySelectorAll('.square');
 squares.forEach(function(square) {
@@ -25,6 +25,5 @@ reset.addEventListener('click', function(e){
         square.style.background = 'white';
     })
 })
-
 
 

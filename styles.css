@@ -3,15 +3,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 800px;
+    width: 800px;
+    height: 800px;
     padding-top: 1rem;
-
 }
 
 .row {
@@ -19,9 +21,6 @@ body {
     flex-wrap: wrap;
 }
 
-.square:hover {
-    background: black;
-}
 
 button {
     background-color: rgba(190, 185, 185, 0.792);
