@@ -14,24 +14,22 @@ function createGrid(squaresNumber) {
         div.classList.add('square');
         container.appendChild(div);
     }
-}
-
-createGrid(squaresNumber);
-
-
-const squares = document.querySelectorAll('.square');
-squares.forEach(function(square) {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(function(square) {
     square.addEventListener('mouseover', (e) => {
         e.target.style.background = `gray`;
     })
-})
-
-const reset = document.querySelector(".reset");
-reset.addEventListener('click', function(e){
+    })
+    const reset = document.querySelector(".reset");
+    reset.addEventListener('click', function(e){
     squares.forEach(function(square) {
         square.style.background = 'white';
     })
 })
+}
+
+createGrid(squaresNumber);
+
 
 function removeSquares() {
     while (container.firstChild) {
@@ -41,10 +39,9 @@ function removeSquares() {
 
 
 slider.addEventListener('input',function() {
-    let text = `Resolution: ${slider.value} x ${slider.value}`;
+    let text = `Resolution: ${this.value} x ${this.value}`;
     sliderValue.innerHTML = text;
     removeSquares();
-    createGrid(slider.value);
+    createGrid(this.value);
 })
-
 
