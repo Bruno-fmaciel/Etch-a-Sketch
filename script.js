@@ -10,7 +10,7 @@ function createGrid(squaresNumber) {
     gridArea = squaresNumber * squaresNumber;
     for (i = 0;i <= gridArea-1;i++) {
         const div = document.createElement("div");
-        div.style.width = div.style.height = `${(800/squaresNumber)}px`;
+        div.style.width = div.style.height = `${(600/squaresNumber)}px`;
         div.classList.add('square');
         container.appendChild(div);
     }
